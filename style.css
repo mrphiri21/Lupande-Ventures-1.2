@@ -1,0 +1,859 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:poppins; /* Choose a modern font */
+    line-height: 1.6;
+    color: #333; /* Dark grey */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    
+    display: block; /* Make the link a block element to contain the image properly */
+    text-decoration: none; /* Remove default link underline */
+}
+.logo img {
+    max-height: 50px; /* Set a maximum height for larger screens */
+    width: auto; /* Allow width to adjust proportionally */
+    display: block; /* Remove any extra space below the image */
+}
+/* Media Query for Smaller Screens (e.g., mobile) */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .logo img {
+        max-height: 40px; /* Smaller logo height on smaller screens */
+    }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #0047AB; /* Livoltek Blue */
+}
+
+/* Hero Section */
+.hero {
+    position: relative; /* Make the hero a positioning context for the video */
+    padding: 100px 0;
+    text-align: center;
+    overflow: hidden; /* Prevent potential scrollbar issues */
+    color: white; /* Set default text color to white for better visibility on the video */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire hero area, potentially cropping */
+    z-index: -1; /* Place the video behind the content */
+    opacity: 0.7;
+    transition: opacity 5s ease; /* Add a smooth transition effect */
+    
+    
+}
+
+
+.hero h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffff; /* Livoltek Blue */
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: #0047ab6b 1px 1px 1px;
+
+}
+
+.hero .subheadline {
+    font-size: 2.5em;
+    color: #45af34;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-weight: 900;
+    text-transform:capitalize;
+    text-shadow: #0047ab6b 1px 1px 1px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #0047AB; /* Livoltek Blue */
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #003380; /* Darker blue */
+}
+
+.btn.secondary {
+    background-color: #8CC63F; /* Livoltek Green */
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background-color: #6aa84f; /* Darker green */
+}
+
+.btn.small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Home About Us Section */
+.home-about-us {
+    padding: 80px 0;
+    background-color: #DDE6E3;
+}
+
+.home-about-us .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+.home-about-us .about-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+}
+
+.home-about-us .about-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.home-about-us .about-images img:first-child {
+    grid-column: 1 / -1;
+}
+
+.home-about-us .about-content {
+    flex: 1;
+}
+
+.home-about-us h2 {
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.home-about-us p {
+    margin-bottom: 15px;
+    color:  #5c6972;
+    line-height: 1.5;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+.home-about-us h3 {
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 43px;
+    letter-spacing: -1px;
+    line-height: 1.037;
+
+}
+
+.home-about-us ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.home-about-us ul li {
+    margin-bottom: 8px;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.home-about-us ul li::before {
+    content: '\2713'; /* Checkmark */
+    color: #8CC63F; /* Livoltek Green */
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* Home Our Services Section */
+.home-our-services {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.home-our-services h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #0047AB;
+    text-align: center;
+}
+
+.home-our-services .services-carousel-wrapper {
+    position: relative;
+}
+
+.home-our-services .services-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 20px; /* To accommodate scrollbar if visible */
+}
+
+.home-our-services .services-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.home-our-services .services-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.home-our-services .service-card {
+    flex: 0 0 300px; /* Adjust width as needed */
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    text-align: left;
+}
+
+.home-our-services .service-card img {
+    max-width: 50px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.home-our-services .service-card h3 {
+    color: #0047AB;
+    margin-bottom: 10px;
+}
+
+.home-our-services .service-card p {
+    color: #555;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.home-our-services .service-card ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.home-our-services .service-card ul li::before {
+    content: '>';
+    color: #8CC63F;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.home-our-services .service-card .btn.small {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.home-our-services .carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.home-our-services .carousel-controls button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.home-our-services .carousel-controls button:hover {
+    color: #0047AB;
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.why-choose h2 {
+    
+    margin-bottom: 40px;
+   /* Livoltek Blue */
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align:center;
+
+}
+
+.benefit {
+    display: flex; /* Enable flexbox for vertical centering */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 200px; /* Set a fixed height for the benefit block */
+    margin-top: 50px;
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+.benefit img { 
+    max-width: 100%; /* Adjust as needed */
+    max-height: 100%; /* Adjust as needed */
+    
+    width: auto;
+    height: auto;
+    margin-bottom: 50px;
+    object-fit: contain; /* Ensure the icon fits without cropping */
+}
+
+.benefit h3 {
+    margin-bottom: 10px;
+    color: #0047AB; /* Livoltek Blue */
+}
+
+/* Livoltek Products Overview Section */
+.livoltek-products-overview {
+    background-color: #DDE6E3;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.livoltek-products-overview h2 {
+    
+    margin-bottom: 40px;
+    
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; /* Enable flexbox for image centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 150px; /* Adjust this value as needed */
+    width: auto;
+    height: auto; /* Allow image height to adjust proportionally */
+    margin-bottom: 15px;
+    object-fit: contain; /* Ensure the image fits within the container without cropping */
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden; /* Important: Hide overflow for the carousel effect */
+}
+
+.testimonials h2 {
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+    margin-bottom: 40px;
+    
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+.testimonial-slide {
+    flex: 0 0 100%; /* Each slide takes up 100% of the carousel width */
+    width: 100%;
+    scroll-snap-align: start; /* Snap to the start of each slide */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 10px; /* Add some horizontal margin between testimonials */
+}
+
+.testimonial .client {
+    font-style: italic;
+    color: #777;
+    margin-top: 15px;
+}
+
+/* Hide scrollbar (optional) */
+.testimonial-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonial-carousel {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #163300;
+    opacity: 0.9;
+    color: #ffffff;
+    padding: 40px 0;
+    font-weight: 400;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-content > div {
+    margin-right: 30px;
+}
+
+.footer-content > div:last-child {
+    margin-right: 0;
+}
+
+.footer-logo a {
+    
+        display: block; /* Make the link a block element to contain the image properly */
+        text-decoration: none; /* Remove default link underline */
+    }
+.footer-logo img {
+        max-height: 200px; /* Set a maximum height for larger screens */
+        width: auto; /* Allow width to adjust proportionally */
+        display: block; /* Remove any extra space below the image */
+    }
+    /* Media Query for Smaller Screens (e.g., mobile) */
+ @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+        .footer-logo img {
+            max-height: 40px; /* Smaller logo height on smaller screens */
+        }
+ }
+    
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Add more specific styles for other pages and elements */
+
+
+.product-category-nav .container ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.product-category-nav .container ul li {
+    margin: 0 15px;
+}
+
+.product-category-nav .container ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    display: block;
+}
+
+.product-category-nav .container ul li a:hover,
+.product-category-nav .container ul li a.active {
+    border-color: #0047AB;
+}
+
+.product-category {
+    padding: 60px 0;
+}
+
+.product-category h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.product-card .spec {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+
+/* About Us Page Styles */
+.our-story, .our-team, .our-partnership, .our-values {
+    padding: 60px 0;
+}
+
+.our-story h2, .our-team h2, .our-partnership h2, .our-values h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+.our-story p {
+   
+    color: #000000;
+    text-align: justify;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.team-member .bio {
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.values-list .value img {
+    width:  35%;
+    height: 70%;
+    margin-bottom: 10px;
+}
+
+.values-list .value h3 {
+    color: #0047AB;
+}
+
+.values-list .value p {
+    font-weight: 200;
+    color: #000000;
+}
+/* Installation & Services Page Styles */
+.installation-process, .maintenance-support, .faq {
+    padding: 60px 0;
+}
+
+.installation-process h2, .maintenance-support h2, .faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.installation-process .step {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.installation-process .step h3 {
+   
+    margin-bottom: 10px;
+    color: #45af34;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.faq-question {
+    color: #0047AB;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Contact Us Page Styles */
+.contact-form-section, .contact-info-section {
+    padding: 60px 0;
+}
+
+.contact-form-section h2, .contact-info-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0047AB;
+}
+
+.contact-form-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.contact-info-section p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-info-section .map-placeholder {
+    height: 300px;
+    background-color: #eee;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 300px;
+}
+
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 10px 0;
+}
