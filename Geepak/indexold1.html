@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupande Ventures Limited</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add to your <head> section -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Lupande Ventures Limited Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-solar">Why Solar</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Empower Your Future with Clean, Affordable Solar Energy</h1>
+        <p>Join the renewable energy revolution. Reduce your carbon footprint, save on energy bills, and invest in a sustainable future with Lupande Ventures Limited.</p>
+        <div class="cta-buttons">
+            <a href="#services" class="cta-button">Our Services</a>
+            <a href="#contact" class="cta-button primary">Get a Free Quote</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="solar-panels.jpg" alt="Solar panels installation" />
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Lupande Ventures</h2>
+    <p>Lupande Ventures Limited is committed to providing cutting-edge solar energy solutions, helping homes and businesses transition to a cleaner, more sustainable future.</p>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="residential-solar-icon.png" alt="Residential Solar" />
+            </div>
+            <h3>Residential Solar Installations</h3>
+            <p>Customized solar systems for homes that maximize energy efficiency and savings.</p>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="commercial-solar-icon.png" alt="Commercial Solar" />
+            </div>
+            <h3>Commercial Solar Solutions</h3>
+            <p>Reliable and cost-effective solar power solutions designed for businesses and enterprises.</p>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="battery-storage-icon.png" alt="Solar Battery Storage" />
+            </div>
+            <h3>Solar Battery Storage</h3>
+            <p>Store excess solar energy with our high-efficiency battery systems for uninterrupted power.</p>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-item">
+            <div class="service-icon">
+                <img src="consultation-icon.png" alt="Solar Consultation" />
+            </div>
+            <h3>Solar Consultation & Design</h3>
+            <p>Expert consultation and custom solar designs to meet your energy needs and goals.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Solar Section -->
+<section id="why-solar" class="why-solar">
+    <h2>Why Choose Solar Energy?</h2>
+    <div class="why-solar-grid">
+        <!-- Benefit 1 -->
+        <div class="why-solar-item">
+            <div class="why-solar-icon">
+                <img src="cost-savings-icon.png" alt="Cost Savings" />
+            </div>
+            <h3>Significant Cost Savings</h3>
+            <p>Solar energy helps you reduce electricity bills by harnessing the sun's free power, leading to long-term savings.</p>
+        </div>
+        
+        <!-- Benefit 2 -->
+        <div class="why-solar-item">
+            <div class="why-solar-icon">
+                <img src="eco-friendly-icon.png" alt="Eco-Friendly" />
+            </div>
+            <h3>Eco-Friendly Energy</h3>
+            <p>Solar power is a clean, renewable energy source that reduces your carbon footprint and helps combat climate change.</p>
+        </div>
+        
+        <!-- Benefit 3 -->
+        <div class="why-solar-item">
+            <div class="why-solar-icon">
+                <img src="energy-independence-icon.png" alt="Energy Independence" />
+            </div>
+            <h3>Energy Independence</h3>
+            <p>With solar panels, you gain greater energy independence and reduce reliance on the grid, ensuring more reliable power.</p>
+        </div>
+        
+        <!-- Benefit 4 -->
+        <div class="why-solar-item">
+            <div class="why-solar-icon">
+                <img src="incentives-icon.png" alt="Government Incentives" />
+            </div>
+            <h3>Government Incentives</h3>
+            <p>Take advantage of solar tax credits, rebates, and incentives offered by governments to lower the upfront cost of installation.</p>
+        </div>
+    </div>
+</section>
+
+<div id="calculator-root"></div>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <blockquote>
+        "Lupande Ventures transformed our business with reliable, cost-effective solar solutions."
+        <footer>- Jane Doe, CEO of ABC Corp.</footer>
+    </blockquote>
+    <blockquote>
+        "Our energy bills have dropped significantly since we switched to solar with Lupande Ventures."
+        <footer>- John Smith, Homeowner</footer>
+    </blockquote>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="#" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
+                    <div class="error-message" id="messageError"></div>
+                </div>
+
+                <button type="submit" class="cta-button primary">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Our Contact Information</h2>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="phone-icon.png" alt="Phone">
+                </div>
+                <p>+123 456 7890</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="email-icon.png" alt="Email">
+                </div>
+                <p>info@lupandeventures.com</p>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <img src="location-icon.png" alt="Location">
+                </div>
+                <p>123 Solar Lane, City, Country</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 Lupande Ventures Limited. All Rights Reserved.</p>
+</footer>
+
+    <script type="text/babel">
+    const SolarCalculator = () => {
+        const [monthlyBill, setMonthlyBill] = React.useState([100]);
+        const [sunlightHours, setSunlightHours] = React.useState([5]);
+        const [yearlySavings, setYearlySavings] = React.useState(0);
+        const [systemSize, setSystemSize] = React.useState(0);
+
+        const ELECTRICITY_RATE = 0.12;
+        const SOLAR_EFFICIENCY = 0.75;
+        const PANEL_WATTAGE = 400;
+
+        React.useEffect(() => {
+            const monthlyKwh = monthlyBill[0] / ELECTRICITY_RATE;
+            const yearlyKwh = monthlyKwh * 12;
+            const calculatedSystemSize = (yearlyKwh / (365 * sunlightHours[0] * SOLAR_EFFICIENCY)) / 1000;
+            const calculatedYearlySavings = monthlyBill[0] * 12 * 0.9;
+            
+            setSystemSize(calculatedSystemSize);
+            setYearlySavings(calculatedYearlySavings);
+        }, [monthlyBill, sunlightHours]);
+
+        const Slider = ({ value, onChange, min, max, step }) => (
+            <input
+                type="range"
+                min={min}
+                max={max}
+                step={step}
+                value={value[0]}
+                onChange={(e) => onChange([parseFloat(e.target.value)])}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+            />
+        );
+
+        return (
+            <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
+                <h2 className="text-2xl font-bold text-center mb-6">Solar Savings Calculator</h2>
+                
+                <div className="space-y-6">
+                    <div>
+                        <label className="block text-sm font-medium mb-2">
+                            Monthly Electricity Bill: ${monthlyBill[0]}
+                        </label>
+                        <Slider
+                            value={monthlyBill}
+                            onChange={setMonthlyBill}
+                            min={50}
+                            max={500}
+                            step={10}
+                        />
+                    </div>
+                    
+                    <div>
+                        <label className="block text-sm font-medium mb-2">
+                            Average Daily Sunlight Hours: {sunlightHours[0]} hours
+                        </label>
+                        <Slider
+                            value={sunlightHours}
+                            onChange={setSunlightHours}
+                            min={2}
+                            max={8}
+                            step={0.5}
+                        />
+                    </div>
+
+                    <div className="mt-8 p-4 bg-green-50 rounded-lg">
+                        <h3 className="text-lg font-semibold mb-4 text-center">Estimated Results</h3>
+                        <div className="space-y-4">
+                            <div className="flex justify-between items-center">
+                                <span className="font-medium">Yearly Savings:</span>
+                                <span className="text-green-600 font-bold">
+                                    ${yearlySavings.toLocaleString(undefined, {
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2,
+                                    })}
+                                </span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <span className="font-medium">Recommended System Size:</span>
+                                <span className="text-blue-600 font-bold">
+                                    {systemSize.toFixed(2)} kW
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    // Render the component
+    const root = ReactDOM.createRoot(document.getElementById('calculator-root'));
+    root.render(<SolarCalculator />);
+</script>
+
+</body>
+</html>
